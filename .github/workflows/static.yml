@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexora Development Hızlı Giriş Sistemi</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            text-align: center;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: bold;
+            color: #ffffff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #00ff90;
+            font-weight: lighter;
+            letter-spacing: 1px;
+            margin-bottom: 50px;
+        }
+
+        .btn {
+            background-color: #00ff90;
+            color: white;
+            padding: 15px 40px;
+            font-size: 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 255, 144, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #00cc73;
+            box-shadow: 0 4px 20px rgba(0, 255, 144, 0.5);
+        }
+
+        .footer {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .footer:hover {
+            color: #ff4d88;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nexora Development</h1>
+        <h2>Hızlı Giriş Sistemi</h2>
+        <a href="https://discord.gg/GcAvb7XNJC" class="footer" target="_blank">Nexora'ya Katıl</a>
+        <br>
+        <a href="steam://connect/212.22.93.178:27016">
+            <button class="btn">Steam ile Bağlan</button>
+        </a>
+    </div>
+</body>
+</html>
