@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMod Sunucusu - Hızlı Giriş</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 90%;
+        }
+        
+        h1 {
+            margin-top: 0;
+            color: #ff6b00;
+        }
+        
+        .connect-btn {
+            background: #00adee;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 20px 0;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .connect-btn:hover {
+            background: #0088cc;
+            transform: scale(1.05);
+        }
+        
+        .server-info {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/5e6b9b603862e1a9a7a9d52c4b02d7a9e410f8b9.jpg" alt="GMod Logo" width="150">
+        <h1>SUNUCU ADI</h1>
+        <p>Hızlı giriş yapmak için butona tıklayın:</p>
+        
+        <a href="steam://connect/SUNUCU_IP:SUNUCU_PORT" class="connect-btn">HEMEN BAĞLAN</a>
+        
+        <div class="server-info">
+            <p><strong>IP:</strong> SUNUCU_IP:SUNUCU_PORT</p>
+            <p><strong>Oyuncular:</strong> <span id="players">0</span>/<span id="maxplayers">64</span></p>
+            <p><strong>Harita:</strong> <span id="map">gm_flatgrass</span></p>
+        </div>
+        
+        <div class="footer">
+            © 2023 Sunucu Adı | Powered by GitHub Pages
+        </div>
+    </div>
+
+    <script>
+        // Sunucu bilgilerini güncellemek için basit bir örnek
+        function updateServerInfo() {
+            // Gerçek uygulamada burada bir API'ye istek atabilirsiniz
+            document.getElementById('players').textContent = Math.floor(Math.random() * 64);
+            document.getElementById('map').textContent = ['gm_flatgrass', 'gm_construct', 'rp_downtown_v4c'][Math.floor(Math.random() * 3)];
+        }
+        
+        // Sayfa yüklendiğinde ve her 30 saniyede bir güncelle
+        updateServerInfo();
+        setInterval(updateServerInfo, 30000);
+    </script>
+</body>
+</html>
