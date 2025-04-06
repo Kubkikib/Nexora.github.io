@@ -1,44 +1,100 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garry's Mod Bağlantısı</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #111;
-            color: #fff;
-        }
-        .container {
-            text-align: center;
-        }
-        .btn {
-            padding: 15px 25px;
-            font-size: 18px;
-            color: #fff;
-            background-color: #5cb85c;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        .btn:hover {
-            background-color: #4cae4c;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GMod Sunucusu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: radial-gradient(circle at center, #1e1e1e, #111);
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .card {
+      background: #111;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .logo {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      color: orange;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 14px;
+      margin: 10px 0;
+    }
+
+    .connect-button {
+      display: inline-block;
+      margin: 20px 0;
+      padding: 12px 20px;
+      background: #00aaff;
+      color: #fff;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,170,255,0.3);
+    }
+
+    .connect-button:hover {
+      background: #008ecc;
+    }
+
+    .info {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .info p {
+      margin: 5px 0;
+      color: #eee;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Garry's Mod Sunucusuna Bağlan</h1>
-        <p>Tek tıkla sunucuya bağlanabilirsiniz!</p>
-        <a href="steam://connect/YOUR_SERVER_IP:YOUR_SERVER_PORT" class="btn">Bağlan</a>
+  <div class="container">
+    <div class="card">
+      <img src="https://cdn.discordapp.com/attachments/1355325652991217866/1358367099101380809/ChatGPT_Image_5_Nis_2025_13_33_57.png?ex=67f39571&is=67f243f1&hm=09aced429c19a11c131358ad84dcc24f972c0e9b5ce11040cf11baa7eca9d75b&" alt="GMod Logo" class="logo">
+      <h1>GMod Sunucusu</h1>
+      <p>Nexora Development Hızlı Giriş Sistemi!</p>
+      <a href="steam://connect/212.22.93.178:27016" class="connect-button">🎮 Bağlan</a>
+      <div class="info">
+        <p><strong>Sunucu IP:</strong> 212.22.93.178:27016</p>
+      </div>
+      <footer>© Nexora Development | Tüm hakları saklıdır</footer>
     </div>
+  </div>
 </body>
 </html>
