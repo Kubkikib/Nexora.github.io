@@ -3,189 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GMod Sunucusu | Hızlı Giriş</title>
+    <title>Garry's Mod Bağlantısı</title>
     <style>
-        :root {
-            --primary: #FF6B00; /* Turuncu */
-            --secondary: #00ADEE; /* Mavi */
-            --dark: #1A1A1A;
-            --light: #F5F5F5;
-            --gray: #333333;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
         body {
-            background: linear-gradient(135deg, var(--dark), var(--gray));
-            color: var(--light);
-            min-height: 100vh;
+            font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
-            background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            background-blend-mode: overlay;
+            height: 100vh;
+            margin: 0;
+            background-color: #111;
+            color: #fff;
         }
-        
         .container {
-            background: rgba(26, 26, 26, 0.9);
-            border-radius: 15px;
-            padding: 40px;
-            width: 100%;
-            max-width: 500px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             text-align: center;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
-        .logo {
-            width: 120px;
-            margin-bottom: 20px;
-        }
-        
-        h1 {
-            color: var(--primary);
-            margin-bottom: 10px;
-            font-size: 28px;
-        }
-        
-        p {
-            margin-bottom: 30px;
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-        
-        .connect-btn {
-            background: var(--secondary);
-            color: white;
-            border: none;
-            padding: 15px 30px;
+        .btn {
+            padding: 15px 25px;
             font-size: 18px;
-            border-radius: 50px;
+            color: #fff;
+            background-color: #5cb85c;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
             text-decoration: none;
-            margin: 20px 0;
-            box-shadow: 0 4px 15px rgba(0, 173, 238, 0.3);
+            transition: background-color 0.3s;
         }
-        
-        .connect-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 173, 238, 0.4);
-            background: #0095D9;
-        }
-        
-        .connect-btn:active {
-            transform: translateY(1px);
-        }
-        
-        .server-info {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .info-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            padding: 8px 0;
-        }
-        
-        .info-label {
-            color: var(--primary);
-            font-weight: bold;
-        }
-        
-        .info-value {
-            text-align: right;
-        }
-        
-        .footer {
-            margin-top: 30px;
-            font-size: 14px;
-            opacity: 0.7;
-        }
-        
-        @media (max-width: 600px) {
-            .container {
-                padding: 30px 20px;
-            }
-            
-            h1 {
-                font-size: 24px;
-            }
+        .btn:hover {
+            background-color: #4cae4c;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/5e6b9b603862e1a9a7a9d52c4b02d7a9e410f8b9.jpg" alt="GMod Logo" class="logo">
-        <h1>GMod Sunucusuna Hoş Geldiniz</h1>
-        <p>En iyi Garry's Mod deneyimi için sunucumuza hemen bağlanın. Tek tıkla giriş yapın ve eğlenceye katılın!</p>
-        
-        <button class="connect-btn" onclick="window.location.href='steam://connect/212.22.93.178:27016'">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 10px;">
-                <path d="M22 12l-4-4v3H3v2h15v3l4-4z"></path>
-            </svg>
-            HEMEN BAĞLAN
-        </button>
-        
-        <div class="server-info">
-            <div class="info-item">
-                <span class="info-label">Sunucu IP:</span>
-                <span class="info-value">212.22.93.178:27016</span>
-            </div>
-            <div class="info-item">
-                <span class="info-label">Oyuncu Sayısı:</span>
-                <span class="info-value" id="playerCount">Yükleniyor...</span>
-            </div>
-            <div class="info-item">
-                <span class="info-label">Harita:</span>
-                <span class="info-value" id="mapName">Yükleniyor...</span>
-            </div>
-        </div>
-        
-        <div class="footer">
-            © 2023 GMod Sunucusu | Tüm hakları saklıdır
-        </div>
+        <h1>Garry's Mod Sunucusuna Bağlan</h1>
+        <p>Tek tıkla sunucuya bağlanabilirsiniz!</p>
+        <a href="steam://connect/YOUR_SERVER_IP:YOUR_SERVER_PORT" class="btn">Bağlan</a>
     </div>
-
-    <script>
-        // Sunucu bilgilerini güncelleme (isteğe bağlı)
-        function updateServerInfo() {
-            // Bu kısımda Steam Web API veya kendi API'nizi kullanabilirsiniz
-            // Örnek olarak rastgele değerler atıyoruz
-            const players = Math.floor(Math.random() * 32) + 5;
-            const maps = ['gm_construct', 'rp_downtown_v4c', 'ttt_rooftops', 'sandbox_flatgrass'];
-            
-            document.getElementById('playerCount').textContent = players + '/64';
-            document.getElementById('mapName').textContent = maps[Math.floor(Math.random() * maps.length)];
-        }
-        
-        // Sayfa yüklendiğinde ve her 30 saniyede bir güncelle
-        updateServerInfo();
-        setInterval(updateServerInfo, 30000);
-        
-        // Buton animasyonu
-        const connectBtn = document.querySelector('.connect-btn');
-        connectBtn.addEventListener('mouseover', function() {
-            this.style.transform = 'translateY(-3px)';
-        });
-        connectBtn.addEventListener('mouseout', function() {
-            this.style.transform = 'translateY(0)';
-        });
-    </script>
 </body>
 </html>
